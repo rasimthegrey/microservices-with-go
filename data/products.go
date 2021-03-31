@@ -13,9 +13,9 @@ type Product struct {
 	Description string `json:"description"`
 	Price float32 `json:"price"`
 	SKU string `json:"sku"`
-	CreatedOn string `json:"-"`
-	UpdatedOn string `json:"-"`
-	DeletedOn string `json:"-"`
+	CreatedOn string `json:"-"` //when we use the '-', CreatedOn will ignored by this package
+	UpdatedOn string `json:"-"` //when we use the '-', UpdatedOn will ignored by this package
+	DeletedOn string `json:"-"` //when we use the '-', DeletedOn will ignored by this package
 }
 
 func (p *Product)FromJSON(r io.Reader) error {
